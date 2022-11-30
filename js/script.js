@@ -20,9 +20,9 @@ Le validazioni e i controlli possiamo farli anche in un secondo momento.
 document.getElementById('myBtn').addEventListener('click', function() {
 
 //recupero il div griglia nel documento
-
-const myGrid = document.getElementById('myGrid');
-
+let myGrid = document.getElementById('myGrid');
+//svuoto il grid per poter giocare più volte
+myGrid.innerHTML = "";
 //creo un ciclo per aggiungere i 100 quadrati alla griglia
   for (let i = 0; i < 100; i++) {
     //creo il div
@@ -41,5 +41,6 @@ const myGrid = document.getElementById('myGrid');
     //aggiungo il nuovo div alla griglia
     myGrid.appendChild(newSquare);
   }
+  
 
-}, {once: true});
+});
