@@ -30,10 +30,17 @@ const myGrid = document.getElementById('myGrid');
     //assegno la mia classe css al nuovo div
     newSquare.classList.add('square')
     //creo un p dove inserire i numeri da 1 a 100
-    newSquare.innerHTML = '<span class="p-1">' + (i + 1) + '</span>'
+    newSquare.innerHTML = '<span class="m-auto">' + (i + 1) + '</span>'
+
+    //creo un evento on click per cambiare colore ai quadrati
+    newSquare.addEventListener("click", function(){
+    newSquare.classList.add('color-blue');
+
+    });
+    
     //aggiungo il nuovo div alla griglia
     myGrid.appendChild(newSquare);
   }
 
 
-});
+}, {once: true});
