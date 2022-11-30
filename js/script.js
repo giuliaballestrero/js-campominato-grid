@@ -34,13 +34,12 @@ const myGrid = document.getElementById('myGrid');
 
     //creo un evento on click per cambiare colore ai quadrati
     newSquare.addEventListener("click", function(){
-    newSquare.classList.add('color-blue');
-
+    newSquare.classList.toggle('color-blue');
+    console.log(i+1);
     });
     
     //aggiungo il nuovo div alla griglia
     myGrid.appendChild(newSquare);
   }
-
 
 }, {once: true});
